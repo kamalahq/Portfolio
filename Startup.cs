@@ -23,6 +23,11 @@ namespace Ryan.Web.UI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            services.AddRouting(cfg =>
+            {
+                cfg.LowercaseUrls = true;
+            });
         }
 
 
