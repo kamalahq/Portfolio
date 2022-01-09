@@ -140,31 +140,31 @@
                 <div class="top-menu">
                     <ul>
                         <li class="active">
-                            <a href="#about-card">
+                            <a asp-controller="home" asp-action="AboutMe">
                                 <span class="icon ion-person"></span>
                                 <span class="link">About</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#resume-card">
+                            <a asp-controller="resume" asp-action="index">
                                 <span class="icon ion-android-list"></span>
                                 <span class="link">Resume</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#works-card">
+                            <a  asp-controller="Works" asp-action="index">
                                 <span class="icon ion-paintbrush"></span>
                                 <span class="link">Ishler</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#blog-card">
+                            <a asp-controller="Blog" asp-action="index">
                                 <span class="icon ion-chatbox-working"></span>
                                 <span class="link">Blog</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#contacts-card">
+                            <a asp-controller="Home" asp-action="contact">
                                 <span class="icon ion-at"></span>
                                 <span class="link">Contact</span>
                             </a>
@@ -195,6 +195,7 @@
                             <p>Web Designer</p>
                             <p>Developer</p>
                             <p>Freelancer</p>
+                            <p>Digital Marketing</p>
                         </div>
                     </div>
 
@@ -209,8 +210,11 @@
 
                     <!-- profile buttons -->
                     <div class="lnks">
-                        <a href="#" class="lnk">
-                            <span class="text">CV yukle</span>
+                        <a @*href="#"*@   href="1.pdf" class="lnk"title=""<i class="fa fa-download" download></i>>
+                        <span class="text">CV yukle</span>
+                        @*<div class="text-center m-top-50">*@
+                            @*<a class="btn line-btn-dark btn-icon btn-radius" href="1.pdf" title=""<i class="fa fa-download" download></i> Download Resume</a>
+                        </div>*@
                         </a>
                         <a href="#" class="lnk discover">
                             <span class="text">Contact Me1111</span>

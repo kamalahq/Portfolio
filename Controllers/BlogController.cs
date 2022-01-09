@@ -8,7 +8,7 @@ namespace Ryan.Web.UI.Controllers
 {
     public class BlogController : Controller
     {
-        public IActionResult Blog()
+        public IActionResult Index()
         {
             return View();
         }

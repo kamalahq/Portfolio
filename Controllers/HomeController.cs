@@ -6,6 +6,8 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Web.Mvc;
+using HttpPostAttribute = Microsoft.AspNetCore.Mvc.HttpPostAttribute;
 
 namespace Ryan.Web.UI.Controllers
 {
@@ -26,8 +28,14 @@ namespace Ryan.Web.UI.Controllers
         {
             return View();
         }
-        public IActionResult Contact()
+        [HttpPost]
+        public IActionResult Contact(Contact contact) 
         {
+            if (ModelState.IsValid)
+            {
+               db.Contact.Add(contact)
+                    db.SaveChanges();
+            }
             return View();
         }
 
