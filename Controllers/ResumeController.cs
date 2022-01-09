@@ -8,7 +8,7 @@ namespace Ryan.Web.UI.Controllers
 {
     public class ResumeController : Controller
     {
-        public IActionResult Resume()
+        public IActionResult Index()
         {
             return View();
         }

@@ -65,7 +65,7 @@ namespace Ryan.Web.UI
 
                 cfg.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Home}/{action=aboutme}/{id?}");
             });
         
             

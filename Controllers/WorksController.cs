@@ -8,7 +8,7 @@ namespace Ryan.Web.UI.Controllers
 {
     public class WorksController : Controller
     {
-        public IActionResult Works()
+        public IActionResult Index()
         {
             return View();
         }
