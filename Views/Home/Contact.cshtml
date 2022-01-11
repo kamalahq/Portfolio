@@ -1,12 +1,10 @@
-﻿
+﻿@model ContactMe
 @{
     ViewData["Title"] = "Index";
 }
 <!--
                Card - Contacts
            -->
-<div class="card-inner contacts" id="contacts-card">
-    <div class="card-wrap">
 
         <!--
             Conacts Info
@@ -50,17 +48,17 @@
                             <div class="row">
                                 <div class="col col-d-6 col-t-6 col-m-12">
                                     <div class="group-val">
-                                        <input type="text" name="name" placeholder="Full Name" />
+                                        <input type="text" name="name" placeholder="Full Name" asp-for="Name"/>
                                     </div>
                                 </div>
                                 <div class="col col-d-6 col-t-6 col-m-12">
                                     <div class="group-val">
-                                        <input type="text" name="email" placeholder="Email Address" />
+                                        <input type="text" name="email" placeholder="Email Address" asp-for="Email" />
                                     </div>
                                 </div>
                                 <div class="col col-d-12 col-t-12 col-m-12">
                                     <div class="group-val">
-                                        <textarea name="message" placeholder="Your Message"></textarea>
+                                        <textarea name="message" placeholder="Your Message" asp-for="Comment"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -68,6 +66,12 @@
                                 <a href="#" class="button" onclick="$('#cform').submit(); return false;">
                                     <span class="text">Send Message</span>
                                     <span class="arrow"></span>
+                                    @if (!string.IsNullOrWhiteSpace(ViewBag.Message))
+                                    {
+                                    <p class="alert-success alert-info">
+                                        @ViewBag.Message
+                                    </p>
+                                    }
                                 </a>
                             </div>
                         </form>
@@ -81,5 +85,4 @@
 
         </div>
 
-    </div>
-</div>
+

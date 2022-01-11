@@ -2,9 +2,11 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Routing;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Ryan.Web.UI.Models.DataContexts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,6 +29,11 @@ namespace Ryan.Web.UI
             services.AddRouting(cfg =>
             {
                 cfg.LowercaseUrls = true;
+            });
+            services.AddDbContext<RyanDbContext>(cfg =>
+            {
+                cfg.UseSqlServer(configuration.GetConnectionString("cString"));
+              
             });
         }
 

@@ -1,24 +1,30 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Ryan.Web.UI.Models;
+using Ryan.Web.UI.Models.DataContexts;
+using Ryan.Web.UI.Models.Entities;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
-using System.Web.Mvc;
-using HttpPostAttribute = Microsoft.AspNetCore.Mvc.HttpPostAttribute;
+
 
 namespace Ryan.Web.UI.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        readonly RyanDbContext db;
+        public HomeController(RyanDbContext db)
         {
-            _logger = logger;
+            this.db = db;
         }
+        //private readonly ILogger<HomeController> _logger;
+
+        //public HomeController(ILogger<HomeController> logger)
+        //{
+        //    _logger = logger;
+        //}
 
         public IActionResult Index()
         {
@@ -28,15 +34,27 @@ namespace Ryan.Web.UI.Controllers
         {
             return View();
         }
+       
+        public IActionResult Contact() 
+        {
+            
+            return View();
+        }
         [HttpPost]
-        public IActionResult Contact(Contact contact) 
+        public IActionResult Contact(ContactMe contact)
         {
             if (ModelState.IsValid)
             {
-               db.Contact.Add(contact)
-                    db.SaveChanges();
+                db.Contacts.Add(contact);
+                db.SaveChanges();
+
+                ModelState.Clear();
+
+                ViewBag.Message = "Sizin sorgunuz qebul edilmisdir.Tezlikle geri donus edeceyik.";
+                return View();
             }
-            return View();
+           
+            return View(contact);
         }
 
         public IActionResult Privacy()
