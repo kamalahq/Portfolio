@@ -41,20 +41,22 @@ namespace Ryan.Web.UI.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Contact(ContactMe contact)
+        public IActionResult Contact(ContactMe contactme)
         {
             if (ModelState.IsValid)
             {
-                db.Contacts.Add(contact);
+                db.Contacts.Add(contactme);
                 db.SaveChanges();
 
                 ModelState.Clear();
 
                 ViewBag.Message = "Sizin sorgunuz qebul edilmisdir.Tezlikle geri donus edeceyik.";
                 return View();
+
             }
-           
-            return View(contact);
+
+            return View(contactme);
+
         }
 
         public IActionResult Privacy()

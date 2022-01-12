@@ -16,7 +16,7 @@ namespace Ryan.Web.UI.Models.Entities
         public string Email { get; set; }
         [Required]
         public string Comment { get; set; }
-        public DateTime CreateDate{ get; set; }
+        public DateTime CreateDate { get; set; } = DateTime.Now;
         public DateTime ?AnswerDate { get; set; }
         public int? AnswerByUserId { get; set; }
     }
