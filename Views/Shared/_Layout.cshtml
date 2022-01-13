@@ -117,13 +117,13 @@
         <div class="container opened" data-animation-in="fadeInLeft" data-animation-out="fadeOutLeft">
 
             <!--
-        Header
-    -->
+                Header
+            -->
             <header class="header">
 
                 <!-- header profile -->
                 <div class="profile">
-                    <div class="title">Ryan Adlard</div>
+                    <div class="title">Kamala Hajiyeva</div>
                     <div class="subtitle subtitle-typed">
                         <div class="typing-title">
                             <p>Web Designer</p>
@@ -175,27 +175,27 @@
             </header>
 
             <!--
-        Card - Started
-    -->
+                Card - Started
+            -->
             <div class="card-started" id="home-card">
 
                 <!--
-            Profile
-        -->
+                    Profile
+                -->
                 <div class="profile no-photo">
 
                     <!-- profile image -->
                     <div class="slide" style="background-image: url(/assets/images/secur.jpg);"></div>
 
                     <!-- profile titles -->
-                    <div class="title">Ryan Adlard</div>
+                    <div class="title">Kamala Hajiyeva</div>
                     <!--<div class="subtitle">Web Designer</div>-->
                     <div class="subtitle subtitle-typed">
                         <div class="typing-title">
                             <p>Web Designer</p>
                             <p>Developer</p>
                             <p>Freelancer</p>
-                            <p>Digital Marketing</p>
+
                         </div>
                     </div>
 
@@ -210,14 +210,14 @@
 
                     <!-- profile buttons -->
                     <div class="lnks">
-                        <a @*href="#"*@ href="1.pdf" class="lnk" title=""<i class="fa fa-download" download></i>>
+                        <a @*href="#"*@ href="/assets/cv/resume2.pdf" class="lnk" title=""<i class="fa fa-download" download></i>>
                         <span class="text">CV yukle</span>
                         @*<div class="text-center m-top-50">*@
                             @*<a class="btn line-btn-dark btn-icon btn-radius" href="1.pdf" title=""<i class="fa fa-download" download></i> Download Resume</a>
                         </div>*@
                         </a>
-                        <a href="#" class="lnk discover">
-                            <span class="text">Contact Me1111</span>
+                        <a asp-controller="Home" asp-action="Contact" class="lnk discover">
+                            <span class="text">Contact Me</span>
                         </a>
                     </div>
 
@@ -230,37 +230,39 @@
 
                     @RenderBody()
 
-                    </div>
                 </div>
-                </div>
-
-                <div class="s_overlay"></div>
-                <partial name="_Sidebar" />
-
             </div>
+        </div>
 
-            <!--
+        <div class="s_overlay"></div>
+        <partial name="_Sidebar" />
+
+    </div>
+
+    <!--
         jQuery Scripts
     -->
-            <script src="~/assets/js/jquery.min.js"></script>
-            <script src="~/assets/js/jquery.validate.js"></script>
-            <script src="~/assets/js/jquery.magnific-popup.js"></script>
-            <script src="~/assets/js/imagesloaded.pkgd.js"></script>
-            <script src="~/assets/js/isotope.pkgd.js"></script>
-            <script src="~/assets/js/jquery.slimscroll.js"></script>
-            <script src="~/assets/js/owl.carousel.js"></script>
-            <script src="~/assets/js/typed.js"></script>
-            <script src="../../../use.fontawesome.com/8da76d029b.js"></script>
+    <script src="~/assets/js/jquery.min.js"></script>
+    <script src="~/assets/js/jquery.validate.js"></script>
+    <script src="~/assets/js/jquery.magnific-popup.js"></script>
+    <script src="~/assets/js/imagesloaded.pkgd.js"></script>
+    <script src="~/assets/js/isotope.pkgd.js"></script>
+    <script src="~/assets/js/jquery.slimscroll.js"></script>
+    <script src="~/assets/js/owl.carousel.js"></script>
+    <script src="~/assets/js/typed.js"></script>
+    <script src="../../../use.fontawesome.com/8da76d029b.js"></script>
 
-            <!--
+    <!--
         Google map api
     -->
-            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDz2w7HUaWudHwd7AWQpCL48Qs050WOn9s"></script>
+    @*<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDz2w7HUaWudHwd7AWQpCL48Qs050WOn9s"></script>*@
+            <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
 
-            <!--
+
+    <!--
         Main Scripts
     -->
-            <script src="~/assets/js/scripts.js"></script>
+    <script src="~/assets/js/scripts.js"></script>
 
 </body>
 
