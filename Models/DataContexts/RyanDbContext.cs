@@ -15,5 +15,7 @@ namespace Ryan.Web.UI.Models.DataContexts
 
         }
         public DbSet <ContactMe> Contacts{ get; set; }
+        public DbSet<NewClass> News{ get; set; }
+        
     }
 }

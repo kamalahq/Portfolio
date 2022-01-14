@@ -106,10 +106,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Areas\Admin\Models\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Include="wwwroot\admin\bower_components\autosize\dist\autosize.min.js" />
     <None Include="wwwroot\admin\bower_components\bootstrap-datepicker\dist\js\bootstrap-datepicker.min.js" />
     <None Include="wwwroot\admin\bower_components\bootstrap-datepicker\js\bootstrap-datepicker.js" />
@@ -205,6 +201,10 @@
     <None Include="wwwroot\admin\bower_components\swiper\package\js\swiper.min.js" />
     <None Include="wwwroot\admin\bower_components\switchery\dist\switchery.min.js" />
     <None Include="wwwroot\admin\bower_components\underscore\underscore-min.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Model\" />
   </ItemGroup>
 
 </Project>

@@ -17,8 +17,13 @@
             <!-- content -->
             <div class="row">
                 <div class="col col-d-12 col-t-12 col-m-12 border-line-v">
-                    <div class="map" id="map">
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.428490145666!2d49.85175681531934!3d40.37719496596716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d079efb5163%3A0xc20aa51a5f0b5e01!2sCode%20Academy!5e0!3m2!1sen!2s!4v1642186493207!5m2!1sen!2s" width="700" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
+                </div>
+
+                <div class="col col-d-12 col-t-12 col-m-12 border-line-v mt-5">
+                
 
                     <div class="info-list">
                         <ul>
@@ -47,7 +52,7 @@
             <div class="row">
             <div class="col col-d-12 col-t-12 col-m-12 border-line-v">
                 <div class="contact_form">
-                    <form id="cform" method="post">
+                    <form method="post" action="Contact">
                         <div class="row">
                             <div class="col col-d-6 col-t-6 col-m-12">
                                 <div class="group-val">
@@ -61,7 +66,8 @@
                             </div>
                             <div class="col col-d-12 col-t-12 col-m-12">
                                 <div class="group-val">
-                                    <textarea name="message" placeholder="Sizin mesajiniz"></textarea>
+                                 
+                                    <textarea name="comment" placeholder="Sizin mesajiniz"></textarea>
                                     @if (!string.IsNullOrWhiteSpace(ViewBag.Message))
                                     {
                                         <p class="alert-success alert-info">
@@ -72,11 +78,11 @@
                             </div>
                         </div>
                         <div class="align-left">
-                            <a href="#" class="button" onclick="$('#cform').submit(); return false;">
+                            <button type="submit" class="btn btn-success">
                                 <span class="text">Send Message</span>
                                 <span class="arrow"></span>
 
-                            </a>
+                            </button>
                         </div>
                     </form>
                     @*<div class="alert-success">
